@@ -1,0 +1,120 @@
+<resources>
+    <string name="app_name" translatable="false">AlarmClock</string>
+    <string name="top_app_bar_title" translatable="false">AlarmClock Controller</string>
+    <string name="home_title">Home Screen</string>
+    <string name="alarm_title">Alarm Settings</string>
+    <string name="player_title">Sound Player</string>
+    <string name="sounds_title">Sound List</string>
+    <string name="settings_title">Settings</string>
+    <string name="invalid_input">Invalid input</string>
+    <string name="settings_host" translatable="false">Webserver Host</string>
+    <string name="alarm_one" translatable="false">Alarm 1</string>
+    <string name="alarm_two" translatable="false">Alarm 2</string>
+    <string name="timer_picker_title">Select time</string>
+    <string name="select_alarm_sound">Select sound</string>
+    <string name="alarm_disabled">Alarm is inactive</string>
+    <string name="weekday_monday">Mon</string>
+    <string name="weekday_tuesday">Tue</string>
+    <string name="weekday_wednesday">Wed</string>
+    <string name="weekday_thursday">Thu</string>
+    <string name="weekday_friday">Fri</string>
+    <string name="weekday_saturday">Sat</string>
+    <string name="weekday_sunday">Sun</string>
+    <string name="every_day">Every Day</string>
+    <string name="once">Once (then inactive)</string>
+    <string name="light_duty">Light Brightness</string>
+    <string name="light_duration">Light Duration</string>
+    <string name="light_duration_title">Duration</string>
+    <string name="enter_light_duty">Enter brightness</string>
+    <string name="help">Help</string>
+    <string name="retry">Try again</string>
+    <string name="player_play">Playback</string>
+    <string name="selected_sound">Selected Sound</string>
+    <string name="player_volume">Volume Control</string>
+    <string name="volume">Volume</string>
+    <string name="input_player_volume">Enter player volume</string>
+    <string name="rename_sound">Rename sound</string>
+    <string name="add_sound">Add sound</string>
+    <string name="fetch_data_failed">Fetching data failed</string>
+    <string name="update_data_failed">Updating data failed</string>
+    <string name="run_task_failed">Running task failed</string>
+    <string name="delete_sound_confirmation">Are you sure you want to delete Sound \'%1$s\' (#%2$d)?</string>
+    <string name="confirm_delete">Confirm deletion</string>
+    <string name="sound_random">Random</string>
+    <string name="sound_silent">Silent</string>
+    <string name="current_time">Current AlarmClock time</string>
+    <string name="light_value">Environment Light</string>
+    <string name="uptime">Uptime</string>
+    <string name="alarm_info">Alarm Overview</string>
+    <string name="other_info">Other Info</string>
+    <string name="running_since">Running since</string>
+    <string name="welcome_message">Welcome to the AlarmClock remote control app.</string>
+    <string name="turn_light_on">Turn On</string>
+    <string name="turn_light_off">Turn Off</string>
+    <string name="settings_app" translatable="false">App</string>
+    <string name="about">About</string>
+    <string name="settings_reset">Reset</string>
+    <string name="settings_port" translatable="false">Webserver Port</string>
+    <string name="settings_language">Language</string>
+    <string name="setup">Setup</string>
+    <string name="enter_light_duration">Enter duration</string>
+    <string name="light_title">Light Control</string>
+    <string name="settings_connection">Connection</string>
+    <string name="error_loading_sound">Sounds not found</string>
+    <string name="settings_reset_message" >All app settings are reset to their default values. This does not affect the AlarmClock data and cannot be undone. Continue?</string>
+    <string name="current_language">Current language: %1$s</string>
+    <string name="language_system" translatable="false">System</string>
+    <string name="language_english">English</string>
+    <string name="language_german">German</string>
+    <string name="settings_reset_support">Reset settings to default values</string>
+    <string name="settings_help_support">Show help screen</string>
+    <string name="home_label">Home</string>
+    <string name="alarm_label" translatable="false">Alarm</string>
+    <string name="light_label">Light</string>
+    <string name="player_label" translatable="false">Player</string>
+    <string name="sounds_label" translatable="false">Sounds</string>
+    <string name="settings_github" translatable="false">GitHub</string>
+    <string name="settings_github_support">View the App\'s source code online</string>
+    <string name="update_successful">Data updated</string>
+    <string name="setup_message" >To use the app, the initial setup of the connection parameters of the AlarmClock webserver is required. Please specify the host and port of the webserver below.</string>
+    <string name="setup_continue">Continue</string>
+    <string name="move_down">Move down</string>
+    <string name="move_up">Move up</string>
+    <string name="delete">Delete</string>
+    <string name="alarm_confirm_in_8h_title">Alarm in 8 hours</string>
+    <string name="alarm_confirm_in_8h_message">Should Alarm %1$d be set to ring in 8 hours from now?</string>
+    <plurals name="days">
+        <item quantity="one">%1$d day</item>
+        <item quantity="other">%1$d days</item>
+    </plurals>
+    <plurals name="hours">
+        <item quantity="one">%1$d hour</item>
+        <item quantity="other">%1$d hours</item>
+    </plurals>
+    <plurals name="minutes">
+        <item quantity="one">%1$d minute</item>
+        <item quantity="other">%1$d minutes</item>
+    </plurals>
+    <plurals name="seconds">
+        <item quantity="one">%1$d second</item>
+        <item quantity="other">%1$d seconds</item>
+    </plurals>
+    <string name="alarm_datetime_pattern">ccc, dd.MM.yy \'at\' HH:mm</string>
+    <string name="task_run_successful">Task completed</string>
+    <string name="light_duty_title">Brightness</string>
+    <string name="help_overview">The AlarmClock refers to a self-built alarm clock based on an ESP-32 microcontroller. This app serves for remote control and configuration of the alarm clock. The clock provides a REST web server within the local network, through which the app communicates with the clock.</string>
+    <string name="help_basic_functions">The app essentially consists of 5 main screens: The home screen provides an overview of important values. The alarm settings allow for configuring the two alarms. The light control enables manipulation of the built-in light. The sound player manages sound playback. The sound list allows for editing saved sound labels.</string>
+    <string name="help_data_refreshing_title">Data Refreshing</string>
+    <string name="help_data_refreshing">The app itself doesn\'t store the alarm clock data; instead, it loads data through the REST API. Data fetching occurs automatically when the app is launched. After that, this process can be manually triggered. This can be done through the refresh icon in the top bar or by performing a pull-down gesture. Also after editing data, changes are automatically loaded from the server.</string>
+    <string name="help_home_screen_title">Home Screen</string>
+    <string name="help_home_screen">The start screen displays the current time of the clock, the next time the alarms will ring, the value of the ambient light sensor, and the elapsed time since the last restart of the clock.</string>
+    <string name="help_alarm_screen_title">Alarm Settings</string>
+    <string name="help_alarm_screen">In the alarm settings, parameters for the two fixed alarms can be adjusted. By clicking on the time, it can be set, and the alarm can be activated or deactivated using the switch. Below that, the days of the week on which the alarm should repeat can be selected. Clicking on the sound field allows assigning a specific sound to the alarm.</string>
+    <string name="help_light_screen_title">Light Control</string>
+    <string name="help_light_screen">The light control allows manipulation of the clock\'s LED lighting. Brightness can be adjusted either by clicking on the brightness field or using the slider. The button can maximize brightness or turn it off. The light duration indicates how long the light will stay on before automatically turning off. This duration can be adjusted similarly to brightness.</string>
+    <string name="help_player_screen_title" translatable="false">Sound Player</string>
+    <string name="help_player_screen">In the sound player, a selected sound can be played or stopped. The sound can be chosen by clicking on the sound field. Below that, the volume of sound playback can be adjusted using the respective field or the slider.</string>
+    <string name="help_sounds_screen_title">Sound List</string>
+    <string name="help_sounds_screen">The sound list exclusively displays the software-based labels of alarm clock sounds. These labels are independent of the sound files stored on the clock, to which a name is assigned through a fixed ID. The name of the sound is the label in the user interface and can be edited by clicking on it. Using the button on the side, it can be determined whether the sound should be included or excluded during random playback. Long pressing a sound allows moving it up or down or deleting it. A new sound can be added using the button at the end of the list.</string>
+    <string name="help_basic_functions_title">Basic Functionality</string>
+</resources>
