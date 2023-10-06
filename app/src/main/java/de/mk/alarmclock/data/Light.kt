@@ -6,6 +6,6 @@ data class Light(
 ) {
     companion object {
         val dutyRange = 0..7
-        val durationRange = 0..240
+        val durationRange = 0..255
     }
 }

@@ -31,8 +31,8 @@ interface ApiService {
     suspend fun getCurrentDateTime(): Response<CurrentDateTime>
 
     @Headers("Accept: application/json")
-    @GET("alarm/{alarm}")
-    suspend fun getAlarm(@Path("alarm") alarm: Int): Response<Alarm>
+    @GET("alarm")
+    suspend fun getAlarm(@Query("id") alarm: Int): Response<Alarm>
 
     @Headers("Accept: application/json")
     @GET("light")
@@ -60,9 +60,9 @@ interface ApiService {
     @PUT("alarm")
     suspend fun setAlarm(@Body alarmData: Alarm): Response<Void>
 
-    @Headers("Content-Type: application/json", "Content-Length: 0")
-    @PUT("alarm/in8h/{alarm}")
-    suspend fun setAlarmIn8h(@Path("alarm") alarm: Int): Response<Void>
+    @Headers("Content-Type: text/plain")
+    @PUT("alarm/in8h")
+    suspend fun setAlarmIn8h(@Query("id") alarm: Int): Response<Void>
 
     @Headers("Content-Type: application/json")
     @PUT("light")
@@ -85,8 +85,8 @@ interface ApiService {
     suspend fun addSound(@Body soundData: Sound): Response<Void>
 
     @Headers("Content-Type: application/json")
-    @DELETE("sound/{sound}")
-    suspend fun deleteSound(@Path("sound") sound: Int): Response<Void>
+    @DELETE("sound")
+    suspend fun deleteSound(@Query("id") sound: Int): Response<Void>
 
     companion object {
         fun create(url: HttpUrl): ApiService = Retrofit.Builder()

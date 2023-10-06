@@ -4,7 +4,7 @@ data class Player(
     var volume: Int,
 ) {
     companion object {
-        val volumeRange = 0..15
+        val volumeRange = 0..30
     }
 }
 
