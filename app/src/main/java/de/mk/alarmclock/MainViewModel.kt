@@ -245,14 +245,14 @@ class MainViewModel @Inject constructor(app: Application) : AndroidViewModel(app
         }
     }
 
-    fun Player.play(sound: Sound) {
+    fun playSound(sound: Sound) {
         val call = RestfulCall(RestfulCall.Type.RUN_TASK) { it.play(sound.id) }
         javaClass.logInfo("Playing sound #${sound.id} [${call.id}]")
         viewModelScope.launch { if (call.run().success) taskRunSuccessfulToast() }
     }
 
-    fun Player.stop() {
-        val call = RestfulCall(RestfulCall.Type.RUN_TASK) { it.stop() }
+    fun stopPlayback() {
+        val call = RestfulCall(RestfulCall.Type.RUN_TASK, ApiService::stop)
         javaClass.logInfo("Stopping playback [${call.id}]")
         viewModelScope.launch { if (call.run().success) taskRunSuccessfulToast() }
     }

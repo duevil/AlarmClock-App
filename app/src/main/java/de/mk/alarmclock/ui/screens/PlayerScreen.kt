@@ -80,7 +80,7 @@ fun MainViewModel.PlayerScreen() {
             horizontalArrangement = Arrangement.Center,
         ) {
             Button(
-                onClick = { selected?.let { player.value.play(it) } },
+                onClick = { selected?.let { playSound(it) } },
                 contentPadding = PaddingValues(horizontal = 16.dp, vertical = 8.dp),
             ) {
                 Row(verticalAlignment = Alignment.CenterVertically) {
@@ -92,7 +92,7 @@ fun MainViewModel.PlayerScreen() {
             }
             Spacer(Modifier.size(24.dp))
             Button(
-                onClick = { player.value.stop() },
+                onClick = { stopPlayback() },
                 contentPadding = PaddingValues(horizontal = 16.dp, vertical = 8.dp),
             ) {
                 Row(verticalAlignment = Alignment.CenterVertically) {

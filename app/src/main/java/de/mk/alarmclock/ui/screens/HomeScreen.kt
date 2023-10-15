@@ -25,11 +25,8 @@ import de.mk.alarmclock.ui.base.items.SmallTextItem
 import de.mk.alarmclock.ui.base.items.TextItem
 import java.time.Duration
 import java.time.Instant
-import java.time.LocalDateTime
-import java.time.ZoneId
 import java.time.ZoneOffset
 import java.time.format.DateTimeFormatter
-import java.time.format.FormatStyle
 
 @Composable
 fun MainViewModel.HomeScreen() {
@@ -52,7 +49,7 @@ fun MainViewModel.HomeScreen() {
     Spacer(Modifier.size(16.dp))
     TextItem(
         headlineText = stringResource(R.string.current_time),
-        supportingText = currentDateTime.instant.getString(fullLocalDateTimeFormatter),
+        supportingText = currentDateTime.instant.dateTimeString,
         leadingContent = { Icons.Time(Modifier.size(32.dp)) },
     )
     SectionTitleItem(R.string.alarm_info)
@@ -77,7 +74,7 @@ fun MainViewModel.HomeScreen() {
 private fun AlarmItem(alarm: Alarm, timeTo: Duration) {
     TextItem(
         headlineText = when {
-            alarm.toggle -> alarm.nextDateTime.getString(patternDateTimeFormatter)
+            alarm.toggle -> alarm.nextDateTime.dateTimeString
             else -> stringResource(R.string.alarm_disabled)
         },
         overlineText = stringResource(
@@ -91,12 +88,9 @@ private fun AlarmItem(alarm: Alarm, timeTo: Duration) {
     )
 }
 
-private val fullLocalDateTimeFormatter: DateTimeFormatter
-    get() = DateTimeFormatter.ofLocalizedDateTime(FormatStyle.LONG)
-private val patternDateTimeFormatter: DateTimeFormatter
-    @Composable get() = DateTimeFormatter.ofPattern(stringResource(R.string.alarm_datetime_pattern))
-
-private fun Instant.getString(dateTimeFormatter: DateTimeFormatter) =
-    LocalDateTime.ofInstant(this, ZoneId.systemDefault()).format(
-        dateTimeFormatter.withZone(ZoneOffset.systemDefault())
-    )
+private val Instant.dateTimeString
+    @Composable
+    get() = DateTimeFormatter
+        .ofPattern(stringResource(R.string.alarm_datetime_pattern))
+        .withZone(ZoneOffset.UTC)
+        .format(this)

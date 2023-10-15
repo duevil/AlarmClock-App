@@ -11,7 +11,6 @@ import androidx.compose.material3.DropdownMenu
 import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.FilledIconToggleButton
 import androidx.compose.material3.FilledTonalIconButton
-import androidx.compose.material3.IconButtonDefaults
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -63,7 +62,6 @@ fun MainViewModel.SoundsScreen() {
             selected = null
         },
         onDismiss = { selected = null },
-        predicate = { it.length in 1..16 },
     )
     forDeletion?.let {
         confirmDeleteDialog(
@@ -78,7 +76,7 @@ fun MainViewModel.SoundsScreen() {
             text = stringResource(R.string.error_loading_sound),
             textStyle = MaterialTheme.typography.bodyMedium.copy(textAlign = TextAlign.Center),
         )
-        sounds.value.forEach {
+        sounds.value.sortedBy(Sound::id).forEach {
             TextItem(
                 headlineText = it.composeName(),
                 supportingText = "#${it.id}",
@@ -90,6 +88,11 @@ fun MainViewModel.SoundsScreen() {
                             .fillMaxWidth()
                             .padding(horizontal = 24.dp),
                     ) {
+                        DropdownMenuItem(
+                            text = { Text("Play") },
+                            onClick = { playSound(it) },
+                            trailingIcon = { Icons.Play() },
+                        )
                         DropdownMenuItem(
                             text = { Text(stringResource(R.string.delete)) },
                             onClick = {
@@ -155,7 +158,6 @@ fun MainViewModel.SoundsScreen() {
                                 checked = it.allowRandom,
                                 onCheckedChange = { b -> setSound(it.copy(allowRandom = b)) }
                             ) { Icons.Random() }
-                            IconButtonDefaults.filledIconToggleButtonColors()
                         }
                     }
                 },
@@ -185,4 +187,4 @@ fun MainViewModel.SoundsScreen() {
     }
 }
 
-private inline val Sound.editable get() = id != Sound.RANDOM && id != Sound.SILENT
+private inline val Sound.editable get() = id != Sound.RANDOM

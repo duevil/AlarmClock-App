@@ -20,7 +20,7 @@ class SoundPickerDialog : FullScreenDialog() {
         super.invoke(R.string.select_alarm_sound) {
             val state = rememberLazyListState(sound.id)
             LazyColumn(state = state) {
-                items(sounds.toTypedArray(), key = Sound::id) {
+                items(sounds.sortedBy(Sound::id).toTypedArray(), key = Sound::id) {
                     TextItem(
                         headlineText = it.composeName(),
                         supportingText = "#${it.id}",

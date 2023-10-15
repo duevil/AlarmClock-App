@@ -99,7 +99,7 @@
         <item quantity="one">%1$d second</item>
         <item quantity="other">%1$d seconds</item>
     </plurals>
-    <string name="alarm_datetime_pattern">ccc, dd.MM.yy \'at\' HH:mm</string>
+    <string name="alarm_datetime_pattern">ccc, dd MMM yyyy \'at\' HH:mm</string>
     <string name="task_run_successful">Task completed</string>
     <string name="light_duty_title">Brightness</string>
     <string name="help_overview">The AlarmClock refers to a self-built alarm clock based on an ESP-32 microcontroller. This app serves for remote control and configuration of the alarm clock. The clock provides a REST web server within the local network, through which the app communicates with the clock.</string>

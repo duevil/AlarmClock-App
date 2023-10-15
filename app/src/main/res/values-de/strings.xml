@@ -88,7 +88,7 @@
     <string name="delete">Löschen</string>
     <string name="alarm_confirm_in_8h_title">Alarm in 8 Stunden</string>
     <string name="alarm_confirm_in_8h_message">"Soll Alarm %1$d so gestellt werden, dass er in 8 Stunden klingelt? "</string>
-    <string name="alarm_datetime_pattern">ccc, dd.MM.yy \'um\' HH:mm</string>
+    <string name="alarm_datetime_pattern">ccc, dd. MMM yyyy \'um\' HH:mm</string>
     <string name="task_run_successful">Aufgabe ausgeführt</string>
     <string name="help_overview">Die AlarmClock bezeichnet einen selbstgebauten Wecker, der auf einem ESP-32-Mikrocontroller basiert. Diese App ermöglicht die Fernsteuerung und Einstellung des Weckers. Der Wecker stellt im lokalen Netzwerk einen REST-Webserver bereit, über den die App mit dem Wecker kommuniziert.</string>
     <string name="help_basic_functions_title">Grundlegende Funktionen</string>

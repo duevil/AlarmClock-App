@@ -7,6 +7,5 @@ data class Sound(
 ) {
     companion object {
         const val RANDOM = 0
-        const val SILENT = 1
     }
 }
